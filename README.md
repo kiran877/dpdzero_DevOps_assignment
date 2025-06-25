@@ -74,19 +74,19 @@ docker-compose down
 
 ### 1. Test Nginx Root
 ```bash
-curl http://localhost:8080/
+curl http://localhost:8081/
 ```
 
 ### 2. Test Service 1 (Golang)
 ```bash
-curl http://localhost:8080/service1/ping
-curl http://localhost:8080/service1/hello
+curl http://localhost:8081/service1/ping
+curl http://localhost:8081/service1/hello
 ```
 
 ### 3. Test Service 2 (Flask)
 ```bash
-curl http://localhost:8080/service2/ping
-curl http://localhost:8080/service2/hello
+curl http://localhost:8081/service2/ping
+curl http://localhost:8081/service2/hello
 ```
 
 ## 📋 Features
@@ -141,7 +141,7 @@ Nginx logs are mounted to `./nginx/logs/` directory for easy access.
 - **Features**: JSON responses, logging, health checks
 
 ### Nginx Reverse Proxy
-- **Port**: 8080 (public)
+- **Port**: 8081 (public)
 - **Features**: 
   - Path-based routing (`/service1/*` → Service 1, `/service2/*` → Service 2)
   - Custom logging with timestamps
